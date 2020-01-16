@@ -1,1 +1,1 @@
-# adaptive-mobile_layout__diploma
+# mq-10__diploma
