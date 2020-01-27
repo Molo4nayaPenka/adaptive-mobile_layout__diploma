@@ -1,1 +1,1 @@
-# mq-10__diploma
+https://molo4nayapenka.github.io/mq-10__diploma/
