@@ -137,12 +137,14 @@ body {
 
 /* main part*/
 
+.section-header {
+  padding-left: 6.25%;
+}
+
 .section-title {
-  box-sizing: border-box;
   font-size: calc(6.25vw + 3rem);
   color: #e7e7e7;
   text-transform: uppercase;
-  padding-left: 6.25%;
   margin-top: 0;
   margin-bottom: 16px;
 }
@@ -150,9 +152,6 @@ body {
 .section-picture-container {
   padding-left: 6.25%;
   padding-right: 6.25%;
-  min-width: 320px;
-  max-width: 640px;
-  box-sizing: border-box;
   display: flex;
 }
 
@@ -163,10 +162,10 @@ body {
 
 .section-item-header {
   display: flex;
-  flex-wrap: wrap;
   padding-bottom: 10px;
   padding-left: 6.25%;
   padding-right: 6.25%;
+  box-sizing: borer-box;
 }
 
 .section-item-container {
@@ -193,20 +192,19 @@ body {
   font-weight: bold;
   position: relative;
   padding-top: 5px;
-  padding-left: 1px;
   box-sizing: border-box;
   margin-right: 8px;
 }
 
 .section-item-number::after {
+  position: absolute;
   content: "";
   display: block;
-  width: 15px;
-  height: 4px;
+  width: 100%;
+  height: 12%;
   background-color: #5e42b0;
-  position: absolute;
   border-radius: 3px;
-  top: 21px;
+  top: 65.6%;
   left: 0;
 }
 
@@ -247,6 +245,7 @@ body {
 
 .imperative-item-picture-container {
   min-width: 320px;
+  min-height: 70px;
 }
 
 .imperative-item-picture {
@@ -274,12 +273,18 @@ body {
   margin-top: 25%;
 }
 
+.imperative-item-number::after {
+  height: 7%;
+  top: 40%;
+}
+
 .section-imperative-item .section-item-number::after {
   background-color: #8f7bc8;
 }
 
 .imperative-item-header-text {
   margin-top: 20px;
+  color: #e7e7e7;
 }
 
 /* footer */
@@ -313,13 +318,12 @@ body {
   padding-right: 6.25%;
   padding-bottom: 10px;
   padding-top: 98px;
-  padding-bottom: 10px;
 }
 
 .logo-button {
   width: 72px;
   height: 74px;
-  background-color: blue;
+  background: linear-gradient(to top, #5234a0, #7650d8);
   display: flex;
   border-radius: 17px;
   margin-bottom: 50px;
@@ -330,9 +334,12 @@ body {
 .logo-button-link {
   display: block;
   margin: auto;
+  padding-bottom: 7.4%;
   fill: #fff;
-  width: 58px;
-  height: 48px;
+  /* width: 58px; */
+  /* height: 48px; */
+  width: 79.45%;
+  height: 64.86%;
 }
 
 .footer-header {
@@ -359,10 +366,64 @@ body {
 
 .footer-logo {
   margin-top: 79px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 641px) {
+  
+  .apps-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .apps-list-item {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 310px;
+  }
+
+  /* main */
+
+  .section-item-container:first-child {
+    background-color: #fff;
+  }
+
+  .section-athlets, .section-players {
+    position: relative;
+  }
+
+  .section-athlets .section-header {
+    order: 1;
+  }    
+
+  .section-picture-container {
+    position: absolute;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .athlets-list {
+    order: 2;
+  }
+
+  .section-item-header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-item-number {
+    font-size: 1.8rem;
+  }
+
+  .section-text-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
+  
   .header {
     background-image: url("../img/football_1280.jpg");
   }
@@ -375,15 +436,7 @@ body {
     margin-bottom: 70px;
   }
 
-  .apps-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   .apps-list-item {
-    margin-left: 0;
-    margin-right: 0;
     width: 46.3%;
   }
 
@@ -402,21 +455,11 @@ body {
 
   /* main */
 
-  .section {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .section-athlets {
-    position: relative;
-  }
-
   .section:first-child {
     margin-bottom: 70px;
   }
   
   .section-athlets .section-header {
-    order: 1;
     padding-left: 38.28%;
   }
 
@@ -424,52 +467,374 @@ body {
     font-size: 8rem;
   }
 
-  .section-picture-container {
-    position: absolute;
-  }
-
   .section-athlets .section-picture-container {
     top: 30px;
     left: -210px;
-  }
-
-  .athlets-list {
-    order: 2;
   }
 
   .section-item-container {
     padding-top: 38px;
   }
 
-  .section-item-container:nth-child(1) {
-    background-color: #fff;
+  .section-item-container:first-child {
     margin-top: 0px;
     padding-top: 38px;
   }
 
   .athlets-item-container {
     padding-left: 38.28%;
-    padding-right: 0;
+    padding-right: 3.9%;
     box-sizing: border-box;
   }
 
-  .section-players {
-    position: relative;
+  .section-item-header-text {
+    font-size: 3.2rem;
+  }
+
+  .section-text {
+    font-size: 1.6rem;
+  }
+
+  .section-players .section-header {
+    padding-left: 3.9%;
   }
 
   .section-players .section-picture-container {
     top: 0;
     right: 0;
+    /* right: calc(17.24vw - 165.5px); */
     padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
   }
 
   .players-item-container {
     padding-right: 44.5%;
-    padding-left: 0;
-    box-sizing: border-box;
+    padding-left: 3.9%;
   }
 
   .imperative-item-picture {
-    /* max-width: 100%; */
+    max-width: 100%;
+  }
+
+  .imperative-item-header {
+    padding-left: 3.9%;
+  }
+
+  .imperative-item-number-container {
+    width: 115px;
+    height: 115px;
+    margin-top: -36px;
+  }
+
+  .imperative-item-header-text {
+    font-size: 8rem;
+    margin-top: 70px;
+  }
+
+  .section-imperative .section-text-container {
+    padding-bottom: 100px;
+    padding-left: 3.9%;
+  }
+  
+  .section-imperative .section-text {
+    font-size: 2.4rem;
+  }
+
+  /* footer */
+
+  .footer {
+    min-height: 958px;
+  }
+
+  .footer-container {
+    min-height: 815px;
+    padding-top: 125px;
+  }
+  
+  .logo-button {
+    width: 135px;
+    height: 135px;
+    padding-bottom: 68px;
+    box-sizing: border-box;
+  }
+
+  .logo-button-link {
+    padding-top: 7.4%;
+    padding-bottom: 0;
+  }
+
+  .footer-header {
+    padding-bottom: 275px;
+    box-sizing: border-box;
+  }
+
+  .footer-header-text {
+    font-size: 8rem;
+  }
+
+  .footer-header-slogan {
+    font-size: 3.6rem;
+  }
+
+  .footer-logo {
+    margin-bottom: calc(3.25% + 2.6%);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 700px) {
+  .section-players {
+    overflow: hidden;
+  }
+
+  .section-players .section-picture-container {
+    right: -60px; 
+  }
+}
+
+@media (min-width: 961px) {
+
+  .header {
+    background-image: url("../img/football_1920.jpg");
+  }
+
+  .header-container {
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10.15%;
+    box-sizing: border-box;
+    margin-bottom: 104px;
+  }
+
+  .logo {
+    width: 190px;
+    height: 52px;
+    margin-bottom: 310px;
+  }
+
+  .header-title-container {
+    margin-bottom: 205px;
+  }
+
+  .header-title {
+    font-size: 9rem;
+    line-height: 1.2;
+  }
+
+  .header-title-2 {
+    margin-left: 29.73%;
+  }
+
+  .apps {
+    max-width: 670px;
+    margin-bottom: 110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .apps-list-item:nth-child(odd) {
+    margin-right: 50px;
+  }
+
+  .app-link {
+    padding-top: 6.4%;
+    padding-bottom: 6.4%;
+  }
+
+  .app-logo {
+    width: 42px;
+    height: 42px;
+    margin-left: 11.9%;
+    margin-right: 9.03%;
+  }
+
+  .apps-list-item:nth-child(2) .app-logo {
+    margin-left: 18.39%;
+  }
+
+  .app-link-text {
+    font-size: 1.4rem;
+  }
+
+  /* main */
+
+  .section-athlets .section-header {
+    padding-left: 52.5%;
+    padding-right: 10.15%;
+  }
+
+  .section-title {
+    font-size: 8rem;
+  }
+
+  .section-athlets .section-picture-container {
+    top: calc(-8.34vw + 80.15px);
+    left: calc(46.92vw - 511px);
+  }
+
+  .section-item-container:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .athlets-item-container {
+    padding-left: 52.5%;
+    padding-right: 10.15%;
+  }
+
+  .section-item-header-text {
+    font-size: 3.6rem;
+  }
+
+  .section-text {
+    font-size: 2rem;
+  }
+
+  .section-players {
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding-top: 100px;
+  }
+
+  .section-players .section-header {
+    padding-left: 10%;
+  }
+
+  .section-players .section-picture-container {
+    top: 10px;
+    right: calc(33.37vw - 520px);
+  }
+
+  .players-item-container {
+    padding-left: 10%;
+    padding-right: 50.78%;
+  }
+
+  .section-imperative-item {
+    display: flex;
+  }
+
+  .section-imperative-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .imperative-item-picture-container {
+    width: 50%;
+  }
+
+  .imperative-item-picture {
+    max-width: 100%;
+  }
+
+  .imperative-item-text-container {
+    width: 50%;
+    /* padding-top: 11%; */
+    /* padding-top: 40px; */
+    padding-top: calc(17.83vw - 131.35px);
+    padding-left: 6.66%;
+    /* padding-right: 10.15%; */
+    padding-right: calc(16.16vw - 115.3px);
+    box-sizing: border-box;
+  }
+
+  .section-imperative-item-text-container:nth-child(even) 
+  .imperative-item-text-container {
+    padding-right: 6.66%;
+    padding-left: calc(16.16vw - 115.3px);
+  }
+
+  .imperative-item-header {
+    padding-bottom: 0;
+    margin-bottom: calc(6.46vw - 22.08px);
+  }
+
+  .imperative-item-number-container {
+    width: calc(7.19vw + 29.9px);
+    height: calc(6.67vw + 28px);
+    top: 0;
+    margin: 0;
+    /* left: calc(-100px - 16.24%); */
+    left: calc(-10.01vw - 18.8px);
+  }
+
+  .section-imperative-item:nth-child(even) 
+  .imperative-item-number-container {
+    left: calc(39.62vw - 20.75px);
+  }
+
+  .imperative-item-number {
+    font-size: calc(0.625vw + 1.2rem);
+  }
+
+  .imperative-item-header-text {
+    font-size: calc(3.65vw + 0.99rem);
+  }
+
+  .section-text {
+    font-size: calc(0.625vw + 1.2rem);
+  }
+
+  /* footer */
+
+  .footer {
+    background-image: url("../img/game_1920.jpg");
+    height: 960px;
+  }
+
+  .footer-container {
+    padding-top: 237px;
+  }
+
+  .logo-button {
+    width: 130px;
+    height: 136px;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 30px;
+    border-radius: 35px;
+  }
+
+  .footer-big-header {
+    width: 826px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 140px;
+  }
+
+  .footer-header {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .footer-header-text {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .footer-header-slogan {
+    font-size: 3rem;
+  }
+
+  .apps {
+    margin-bottom: 245px;
+  }
+
+  .footer-logo {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1921px) {
+  .imperative-item-picture {
+    margin-left: auto;
+    width: 1024px;
+  }
+
+  .imperative-item-text-container {
+    padding-top: 213px;
+  }
+
+  .imperative-item-header {
+    margin-bottom: 103px;
   }
 }
