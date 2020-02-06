@@ -422,7 +422,7 @@ body {
   }
 
   .imperative-item-picture-container {
-    height: 100px;
+    min-height: 100px;
   }
 }
 
