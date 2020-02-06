@@ -245,7 +245,7 @@ body {
 
 .imperative-item-picture-container {
   min-width: 320px;
-  min-height: 70px;
+  min-height: 80px;
 }
 
 .imperative-item-picture {
@@ -419,6 +419,10 @@ body {
   .section-text-container {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .imperative-item-picture-container {
+    height: 100px;
   }
 }
 
