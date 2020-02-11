@@ -165,7 +165,7 @@ body {
   padding-bottom: 10px;
   padding-left: 6.25%;
   padding-right: 6.25%;
-  box-sizing: borer-box;
+  box-sizing: border-box;
 }
 
 .section-item-container {
@@ -201,10 +201,9 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: 12%;
+  height: 4px;
   background-color: #5e42b0;
   border-radius: 3px;
-  top: 65.6%;
   left: 0;
 }
 
@@ -334,12 +333,8 @@ body {
 .logo-button-link {
   display: block;
   margin: auto;
-  padding-bottom: 7.4%;
   fill: #fff;
-  /* width: 58px; */
-  /* height: 48px; */
   width: 79.45%;
-  height: 64.86%;
 }
 
 .footer-header {
@@ -559,13 +554,6 @@ body {
   .logo-button {
     width: 135px;
     height: 135px;
-    padding-bottom: 68px;
-    box-sizing: border-box;
-  }
-
-  .logo-button-link {
-    padding-top: 7.4%;
-    padding-bottom: 0;
   }
 
   .footer-header {
@@ -701,10 +689,11 @@ body {
 
   .section-players .section-header {
     padding-left: 10%;
+    width: 450px;
   }
 
   .section-players .section-picture-container {
-    top: 10px;
+    top: 20px;
     right: calc(33.37vw - 520px);
   }
 
@@ -727,15 +716,13 @@ body {
 
   .imperative-item-picture {
     max-width: 100%;
+    display: block;
   }
 
   .imperative-item-text-container {
     width: 50%;
-    /* padding-top: 11%; */
-    /* padding-top: 40px; */
     padding-top: calc(17.83vw - 131.35px);
     padding-left: 6.66%;
-    /* padding-right: 10.15%; */
     padding-right: calc(16.16vw - 115.3px);
     box-sizing: border-box;
   }
@@ -756,7 +743,6 @@ body {
     height: calc(6.67vw + 28px);
     top: 0;
     margin: 0;
-    /* left: calc(-100px - 16.24%); */
     left: calc(-10.01vw - 18.8px);
   }
 
@@ -789,7 +775,7 @@ body {
   }
 
   .logo-button {
-    width: 130px;
+    min-width: 130px;
     height: 136px;
     margin-left: 0;
     margin-bottom: 0;
@@ -828,7 +814,15 @@ body {
   }
 }
 
+@media (min-width: 961px) and (max-width: 1490px) {
+  .section-players .section-picture-container {
+    top: 60px;
+    right: -440px;
+  }
+}
+
 @media (min-width: 1921px) {
+
   .imperative-item-picture {
     margin-left: auto;
     width: 1024px;
@@ -840,5 +834,18 @@ body {
 
   .imperative-item-header {
     margin-bottom: 103px;
+  }
+}
+
+@media (min-width: 2048px) {
+  .section-imperative-item {
+    width: 2048px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-imperative-item:nth-child(even)
+  .imperative-item-number-container {
+    left: 790px;
   }
 }
